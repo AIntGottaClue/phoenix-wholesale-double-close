@@ -1,0 +1,18 @@
+/** Distinct Phoenix-area city pages. City membership: Maricopa Association of Governments. */
+export const cities = [
+ {slug:'phoenix',name:'Phoenix',note:'For a Phoenix double close, identify whether the property is an older central-city home or a newer subdivision address. Tell the escrow team if an HOA is involved and confirm both sides can close in sequence.'},
+ {slug:'mesa',name:'Mesa',note:'Mesa spans established neighborhoods and newer east-valley subdivisions. Share the parcel address, any HOA details and the seller-to-wholesaler and wholesaler-to-buyer contracts with the closing team.'},
+ {slug:'tempe',name:'Tempe',note:'Tempe deals can involve detached houses, attached homes or condo units. Clarify property type and any association or transfer requirements with the escrow officer before setting both closings.'},
+ {slug:'scottsdale',name:'Scottsdale',note:'Scottsdale transactions may have association or community rules that affect documents and timing. Confirm the exact property and title requirements with escrow before scheduling the purchase and resale.'},
+ {slug:'chandler',name:'Chandler',note:'For a Chandler transaction, document the A-to-B purchase and B-to-C resale separately. If the property is in a planned community, flag association disclosures and fees early.'},
+ {slug:'gilbert',name:'Gilbert',note:'Gilbert has many planned-community properties. Tell the escrow or title team whether an HOA is involved and whether one office or two will handle the two closings.'},
+ {slug:'glendale',name:'Glendale',note:'A Glendale property can be an established house or a newer subdivision home. Confirm title, end-buyer funds and the escrow sequence for the specific file rather than assuming the two closings will be automatic.'},
+ {slug:'peoria',name:'Peoria',note:'Peoria deals span older neighborhoods and newer planned communities. Confirm HOA documents where applicable and make sure the end-buyer closing is ready before setting the purchase-side funding.'},
+ {slug:'surprise',name:'Surprise',note:'For a Surprise home, share the resale contract, planned closing date and any HOA information. Escrow can confirm whether both sides can be scheduled back to back.'},
+ {slug:'goodyear',name:'Goodyear',note:'Goodyear includes planned communities where association documents may matter. Identify the escrow company, the end buyer and the exact contract sequence when submitting a deal.'},
+ {slug:'avondale',name:'Avondale',note:'Avondale wholesalers should verify both contract prices and the closing office handling each side. If two title companies are involved, flag that arrangement before asking for a fee review.'},
+ {slug:'buckeye',name:'Buckeye',note:'Buckeye parcels can sit in different kinds of communities. Check the property-specific association and title details with escrow, then share both contracts for a transaction-level review.'},
+ {slug:'queen-creek',name:'Queen Creek',note:'Queen Creek transactions may involve newer communities and association paperwork. Give the closing professional time to confirm title, transfer requirements and the B-to-C buyer funds.'},
+ {slug:'fountain-hills',name:'Fountain Hills',note:'A Fountain Hills double close needs the same two-contract review as any other area. Confirm any community rules, title details and whether one or two closing offices will coordinate the sequence.'},
+ {slug:'paradise-valley',name:'Paradise Valley',note:'For a Paradise Valley property, ask the title team to verify parcel-specific requirements and both parties’ closing readiness. Funding remains subject to review of the actual deal documents.'}
+];
