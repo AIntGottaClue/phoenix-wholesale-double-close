@@ -308,3 +308,16 @@ p { margin: 0 0 1em; }
   .site-nav__dropdown-menu a { padding: 8px 4px; }
 }
 @media (max-width: 480px) { .site-nav__dropdown-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 8px; } }
+/* Keep nav labels readable on small desktops instead of wrapping each word. */
+@media (min-width: 981px) and (max-width: 1180px) {
+  .site-header__toggle { display: block; }
+  .site-nav { position: absolute; top: 72px; left: 0; right: 0; background: var(--navy-900); flex-direction: column; align-items: stretch; gap: 0; padding: 12px 24px 24px; border-bottom: 1px solid rgba(255,255,255,.1); display: none; max-height: calc(100vh - 72px); overflow-y: auto; }
+  .site-nav.is-open { display: flex; }
+  .site-nav__list { flex-direction: column; gap: 0; }
+  .site-nav__list a { display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .site-nav__list a::after { display: none; }
+  .site-nav__dropdown-trigger { display: block; width: 100%; text-align: left; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .site-nav__dropdown-menu { position: static; width: 100%; box-shadow: none; max-height: none; background: transparent; border: 0; padding: 8px 0; }
+  .site-nav__dropdown-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .site-nav__cta { margin-top: 16px; }
+}
