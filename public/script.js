@@ -31,7 +31,7 @@
   // which forwards them to GHL. This handler only stops the browser from navigating away.
   // It never calls stopPropagation, keeps every field's name and value in place (full_name, phone as +1XXXXXXXXXX, email, wdc_detials), and swaps in the
   // success message a moment later so the tracker can read the fields and finish sending.
-  var form = document.getElementById('Phoenix-Wholesale-Double-Close-Form');
+  var form = document.querySelector('form.deal-form');
   var success = document.getElementById('deal-success');
 
   // ===== Phone: GHL needs E.164 (+1XXXXXXXXXX), or it rejects the contact ("Invalid country calling code") =====
