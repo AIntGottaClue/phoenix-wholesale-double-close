@@ -1,0 +1,1 @@
+{"name":"phoenix-wholesale-double-close","type":"module","version":"1.0.0","scripts":{"build":"astro build","dev":"astro dev","preview":"astro preview"},"dependencies":{"@astrojs/cloudflare":"^12.6.13","astro":"^5.13.0"}}
