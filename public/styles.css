@@ -283,3 +283,28 @@ p { margin: 0 0 1em; }
 /* Prevent long city names and text from widening the mobile hero grid. */
 @media(max-width:980px){.hero__inner{grid-template-columns:minmax(0,1fr)}.hero__content,.hero__form-card{min-width:0;max-width:100%}.hero__title,.hero__text{overflow-wrap:anywhere}}
 @media(max-width:760px){.hero__line{white-space:normal;overflow-wrap:normal}.hero__title{overflow-wrap:normal}}
+
+
+/* Metro service areas dropdown, matched to the Atlanta WDC navigation. */
+.site-nav__dropdown { position: relative; }
+.site-nav__dropdown-trigger { color: rgba(255,255,255,.82); font: 600 15px var(--sans); background: none; border: 0; padding: 0; cursor: pointer; white-space: nowrap; }
+.site-nav__dropdown-trigger:hover, .site-nav__dropdown-trigger:focus-visible { color: var(--white); }
+.site-nav__dropdown-menu { display: none; position: absolute; top: 100%; right: 0; width: min(580px, calc(100vw - 48px)); padding: 18px; background: var(--navy-800); border: 1px solid rgba(255,255,255,.14); border-radius: 8px; box-shadow: var(--shadow); z-index: 70; }
+.site-nav__dropdown:hover .site-nav__dropdown-menu, .site-nav__dropdown:focus-within .site-nav__dropdown-menu, .site-nav__dropdown.is-open .site-nav__dropdown-menu { display: block; }
+.site-nav__dropdown-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2px 12px; }
+.site-nav__dropdown-menu a { display: block; padding: 8px; border-radius: 5px; font-size: 14px; white-space: normal; }
+.site-nav__dropdown-menu a:hover, .site-nav__dropdown-menu a:focus-visible { background: var(--navy-700); }
+.site-nav__dropdown-menu a::after { display: none; }
+/* A long city title must not consume the form column. */
+.hero__inner { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+.hero__content, .hero__form-card { min-width: 0; }
+.hero__line { white-space: normal; }
+@media (max-width: 980px) {
+  .hero__inner { grid-template-columns: minmax(0,1fr); }
+  .site-nav { max-height: calc(100vh - 72px); overflow-y: auto; }
+  .site-nav__dropdown-trigger { display: block; width: 100%; text-align: left; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .site-nav__dropdown-menu { position: static; width: 100%; box-shadow: none; max-height: none; background: transparent; border: 0; padding: 8px 0; }
+  .site-nav__dropdown-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .site-nav__dropdown-menu a { padding: 8px 4px; }
+}
+@media (max-width: 480px) { .site-nav__dropdown-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 8px; } }
