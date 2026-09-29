@@ -15,6 +15,21 @@
       }
     });
   }
+  var dropdown = document.querySelector('.site-nav__dropdown');
+  if (dropdown) {
+    var trigger = dropdown.querySelector('.site-nav__dropdown-trigger');
+    var closeDropdown = function () { dropdown.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); };
+    trigger.addEventListener('click', function () {
+      var open = trigger.getAttribute('aria-expanded') === 'true';
+      dropdown.classList.toggle('is-open', !open);
+      trigger.setAttribute('aria-expanded', String(!open));
+    });
+    document.addEventListener('click', function (e) { if (!dropdown.contains(e.target)) closeDropdown(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDropdown(); });
+    if (toggle) toggle.addEventListener('click', function () {
+      if (toggle.getAttribute('aria-expanded') === 'false') closeDropdown();
+    });
+  }
   var y = document.querySelector('[data-year]');
   if (y) y.textContent = new Date().getFullYear();
   // Mobile sticky CTA: hide while the hero form is on screen so it never covers form fields.
